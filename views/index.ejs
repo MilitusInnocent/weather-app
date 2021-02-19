@@ -23,7 +23,11 @@
 
     <div class="result">
       <% if(temp !== null)  {%>
-        <h1 class="temp"><%= temp %></h1>
+        <h1 class="temp"><%= temp %> &nbsp C</h1>
+      <% } %>
+
+      <% if(temp !== null)  {%>
+        <h1 class="temp"><%= temp*1.8 + 32 %> &nbspF</h1>
       <% } %>
 
       <div class="icon-des">
@@ -38,7 +42,15 @@
       <% if(date !== null)  {%>
         <p class="date"><%= date %></p>
       <% } %>
-      
+
+      <% if(humidity !== null)  {%>
+        <p>humidity is: <%= humidity %></p>
+      <% } %>
+
+      <% if(wind_speed !== null)  {%>
+        <p>Wind speed is: <%= wind_speed %></p>
+      <% } %>
+
 
       <% if(lat !== null)  {%>
         <p class="lat"><%= lat %></p>

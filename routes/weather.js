@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) =>{
   const lat = req.body.lat;
   const lon = req.body.lon;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.API_KEY}`;
 
   try {
     await fetch(url)
